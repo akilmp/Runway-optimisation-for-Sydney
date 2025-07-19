@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: Syd Perf API
+  version: 1.0.0
+paths:
+  /data/latest:
+    get:
+      summary: Latest data
+      responses:
+        '200':
+          description: data
+  /perf/calc:
+    post:
+      summary: Calculate performance
+      responses:
+        '200':
+          description: result

@@ -1,0 +1,17 @@
+# Node modules
+frontend/node_modules
+# Build outputs
+backend/bin
+*.log
+*.exe
+vendor/
+# Editor
+.DS_Store
+.idea
+.env
+
+# Terraform
+infra/.terraform/
+
+# compiled assets
+frontend/dist
