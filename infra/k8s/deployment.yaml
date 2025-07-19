@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syd-perf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: syd-perf
+  template:
+    metadata:
+      labels:
+        app: syd-perf
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/example/syd-perf-backend:latest
+          ports:
+            - containerPort: 8080
+        - name: frontend
+          image: ghcr.io/example/syd-perf-frontend:latest
+          ports:
+            - containerPort: 80
